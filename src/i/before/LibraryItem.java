@@ -3,19 +3,19 @@ package i.before;
 import java.time.LocalDateTime;
 
 public interface LibraryItem {
-    String getAuthor();
+    String getAuthor(); //
 
-    LocalDateTime getBorrowDate();
+    LocalDateTime getBorrowDate(); //
 
-    String getBorrower();
+    String getBorrower(); //
 
-    int getCheckOutDurationInDays();
+    int getCheckOutDurationInDays(); //
 
-    String getLibraryId();
+    String getLibraryId(); //
 
-    int getPages();
+    int getPages(); //
 
-    String getTitle();
+    String getTitle(); //
 
     void checkIn();
 

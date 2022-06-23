@@ -11,10 +11,12 @@ public class CEO extends Employee {
 
     @Override
     public void assignManager(Employee manager) {
+
         throw new UnsupportedOperationException("This CEO has no manager");
     }
 
     public void fireSomeone() {
+
         System.out.println("You're Fired!");
     }
 }
