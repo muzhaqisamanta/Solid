@@ -2,8 +2,8 @@ package i.after;
 
 import java.time.LocalDateTime;
 
-public class AudioBook implements LibraryItem, AudioBookItem {
-
+public class AudioBook implements LibraryItem, AudioBookItem,ExchangePolicy {
+    String author;
     int runTimeInMinutes;
     LocalDateTime borrowDate;
     String borrower;
@@ -11,6 +11,8 @@ public class AudioBook implements LibraryItem, AudioBookItem {
     String libraryId;
     String title;
 
+    @Override
+    public String getAuthor(){return author;}
     @Override
     public int getRuntimeInMinutes() {
         return runTimeInMinutes;
@@ -39,5 +41,21 @@ public class AudioBook implements LibraryItem, AudioBookItem {
     @Override
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public void checkIn() {
+        borrower="";
+    }
+
+    @Override
+    public void checkOut(String borrower) {
+        this.borrower = borrower;
+        borrowDate = LocalDateTime.now();
+    }
+
+    @Override
+    public LocalDateTime getDueDate() {
+        return null;
     }
 }

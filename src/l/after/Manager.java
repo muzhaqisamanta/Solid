@@ -1,2 +1,4 @@
-package l.after;public interface Manager {
+package l.after;
+
+public interface Manager {
 }

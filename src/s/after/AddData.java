@@ -2,16 +2,20 @@ package s.after;
 
 import java.util.Scanner;
 
-public class PersonData {
-    public static Person addData() {
-        Scanner reader = new Scanner(System.in);
-        s.after.Person person = new Person();
+public class AddData {
+    Scanner reader = new Scanner(System.in);
+    s.after.Person person = new Person();
 
-        System.out.println("What is your first name: ");
+    public void addFirstname(){
         person.setFirstName(reader.next());
-
-        System.out.println("What is your last name: ");
+        if (person.getFirstName() == null || person.getFirstName().isEmpty()) {
+            System.out.println("You did not give us a valid first name!");
+        }
+    }
+    public void addLastName(){
         person.setLastName(reader.next());
-        return person;
+        if (person.getLastName() == null || person.getLastName().isEmpty()) {
+            System.out.println("You did not give us a valid last name!");
+        }
     }
 }

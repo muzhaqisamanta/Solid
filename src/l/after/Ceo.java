@@ -1,2 +1,4 @@
-package l.after;public class Ceo {
+package l.after;
+
+public class Ceo {
 }

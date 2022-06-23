@@ -2,7 +2,7 @@ package i.after;
 
 import java.time.LocalDateTime;
 
-public class Book implements BookItem, LibraryItem {
+public class Book implements BookItem, LibraryItem,ExchangePolicy {
     int pages;
     String author;
     LocalDateTime borrowDate;
@@ -44,5 +44,20 @@ public class Book implements BookItem, LibraryItem {
     @Override
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public void checkIn() {
+        borrower = "";}
+
+    @Override
+    public void checkOut(String borrower) {
+        this.borrower = borrower;
+        borrowDate = LocalDateTime.now();
+    }
+
+    @Override
+    public LocalDateTime getDueDate() {
+        return null;
     }
 }

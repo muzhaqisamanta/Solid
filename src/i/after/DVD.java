@@ -3,7 +3,7 @@ package i.after;
 import java.time.LocalDateTime;
 import java.util.List;
 
-public class DVD implements DvdItem, LibraryItem{
+public class DVD implements DvdItem, LibraryItem, ExchangePolicy{
     List<String> actors;
     int runTimeInMinutes;
     LocalDateTime borrowDate;
@@ -11,6 +11,7 @@ public class DVD implements DvdItem, LibraryItem{
     int checkOutDurationIndays;
     String libraryId;
     String title;
+
 
     @Override
     public List<String> getActors() {
@@ -45,5 +46,22 @@ public class DVD implements DvdItem, LibraryItem{
     @Override
     public String getTitle() {
         return title;
+    }
+
+    @Override
+    public void checkIn() {
+        borrower = "";
+
+    }
+
+    @Override
+    public void checkOut(String borrower) {
+        this.borrower = borrower;
+        borrowDate = LocalDateTime.now();
+    }
+
+    @Override
+    public LocalDateTime getDueDate() {
+        return null;
     }
 }

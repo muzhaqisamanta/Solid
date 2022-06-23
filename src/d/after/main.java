@@ -1,8 +1,8 @@
-package d.before;
+package d.after;
 
 public class main {
     public static void main(String[] args) {
-        Person owner = new Person();
+        d.after.Person owner = new Person();
         owner.firstName = "William";
         owner.lastName = "Ardianto";
         owner.phone = "+60189662679";

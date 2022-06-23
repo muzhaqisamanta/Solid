@@ -1,4 +1,4 @@
-package d.before;
+package d.after;
 
 public class Chore {
     public String choreName;
@@ -17,6 +17,6 @@ public class Chore {
         log.log(String.format("Completed %s", choreName));
 
         Email email = new Email();
-        email.sendEmail(owner, String.format("The chore %s is complere", choreName));
+        email.sendMessage(owner, String.format("The chore %s is complere", choreName));
     }
 }
