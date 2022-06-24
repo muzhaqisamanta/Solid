@@ -1,6 +1,6 @@
 package o.after;
 
-public class Applicant {
+public class Applicant extends Staff{
     String firstName;
     String lastName;
     EmployeeType typeOfEmployee;

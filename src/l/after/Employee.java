@@ -1,17 +1,19 @@
 package l.after;
 
-public interface Employee {
-    String getFirstName();
+public class Employee implements EmployeeInterface{
+    public String firstName;
+    public String lastName;
+    public Employee manager;
+    public double salary;
 
-    void setFirstName(String firstName);
+    @Override
+    public void assignManager(Employee manager){
+        this.manager = manager;
+    }
 
-    String getLastName();
-
-    void setLastName(String lastName);
-
-    double getSalary();
-
-    void setSalary(double salary);
-
-    void calculatePerHourRate(int rank);
+    @Override
+    public void calculatePerHourRate(int rank){
+        double baseAmount = 12.50;
+        salary = baseAmount + (rank * 2);
+    }
 }
